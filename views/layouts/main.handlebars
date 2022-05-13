@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Fitness</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <a href="/"> <span style='font-size: 70px;'>&#127947;&#65039;&#8205;&#9794;&#65039;</span>Community Fitness <span style='font-size: 70px;'>&#127947;&#127998;&#8205;&#9792;&#65039;</span></a>
+      </h1>
+      <nav>
+        {{#if loggedIn}}
+        <a class="btn-no-style" href="/dashboard">Create a new workout plan</a>
+        <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+        <a href="/login">Sign In</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      Thanks for working out with us!
+    </footer>
+  </div>
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
